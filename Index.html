@@ -1,221 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Switch</title>
-</head>
-<body>
-  <div class="app-container">
-    <div class="app-header">
-      <h1 class="app-title">Switch</h1>
-      <button class="settings-button">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="3"></circle>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-        </svg>
-      </button>
-      <button class="power-button active">
-        <svg viewBox="0 0 24 24">
-          <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
-          <line x1="12" y1="2" x2="12" y2="12"></line>
-        </svg>
-      </button>
-    </div>
-    <div class="content-container">
-    
-      <div class="panel left">
-        <div class="panel-title">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-          </svg>
-          Left Ear
-        </div>
-        <div class="volume-control">
-          <div class="volume-header">
-            <span class="volume-label">Volume</span>
-            <span class="volume-value left-volume">80%</span>
-          </div>
-          <div class="volume-slider-container left-slider">
-            <div class="volume-slider-fill" style="width: 80%;"></div>
-            <div class="volume-slider-handle" style="left: 80%;"></div>
-          </div>
-        </div>
-        <div class="audio-sources left-sources">
-          <div class="source-item" data-source="youtube">
-            <div class="source-info">
-              <div class="source-icon youtube-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
-                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                </svg>
-              </div>
-              <span class="source-name">YouTube - Music</span>
-            </div>
-            <div class="remove-source">×</div>
-          </div>
-          <div class="source-item" data-source="spotify">
-            <div class="source-info">
-              <div class="source-icon spotify-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
-                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path>
-                </svg>
-              </div>
-              <span class="source-name">Spotify</span>
-            </div>
-            <div class="remove-source">×</div>
-          </div>
-        </div>
-        <button class="add-source-button">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-          Add Audio Source
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self';"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Switch</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <canvas id="canvas"></canvas>
+
+      <div class="app-header">
+        <h1 class="app-title">Switch</h1>
+        <button class="settings-button header-button" title="Settings">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
         </button>
-        <div class="drop-zone">
-          <div class="drop-message">Drop audio source here</div>
-        </div>
-      </div>
-      
-
-      <div class="panel right">
-        <div class="panel-title">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-          </svg>
-          Right Ear
-        </div>
-        <div class="volume-control">
-          <div class="volume-header">
-            <span class="volume-label">Volume</span>
-            <span class="volume-value right-volume">65%</span>
-          </div>
-          <div class="volume-slider-container right-slider">
-            <div class="volume-slider-fill" style="width: 65%;"></div>
-            <div class="volume-slider-handle" style="left: 65%;"></div>
-          </div>
-        </div>
-        <div class="audio-sources right-sources">
-          <div class="source-item" data-source="discord">
-            <div class="source-info">
-              <div class="source-icon discord-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
-                  <path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path>
-                </svg>
-              </div>
-              <span class="source-name">Discord Voice</span>
-            </div>
-            <div class="remove-source">×</div>
-          </div>
-        </div>
-        <button class="add-source-button">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-          Add Audio Source
-        </button>
-        <div class="drop-zone">
-          <div class="drop-message">Drop audio source here</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="modal-overlay">
-    <div class="source-detail-modal">
-      <div class="modal-header">
-        <h2 class="modal-title">Source Details</h2>
-        <button class="close-modal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
+        <button class="power-button header-button" title="Toggle Power (OFF)">
+          <svg viewBox="0 0 24 24"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>
         </button>
       </div>
-      <div class="modal-content">
-        <div class="control-group">
-          <div class="volume-header">
-            <span class="control-label">Volume</span>
-            <span class="volume-value modal-volume">75%</span>
-          </div>
-          <div class="volume-slider-container modal-slider">
-            <div class="volume-slider-fill" style="width: 75%; background-color: var(--accent-2);"></div>
-            <div class="volume-slider-handle" style="left: 75%; background-color: var(--accent-2);"></div>
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="volume-header">
-            <span class="control-label">Mute</span>
-            <label class="toggle-switch">
-              <input type="checkbox" class="mute-toggle">
-              <span class="toggle-slider"></span>
-            </label>
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="volume-header">
-            <span class="control-label">Balance</span>
-          </div>
-          <div class="balance-slider-container">
-            <div class="balance-slider-fill-left" style="width: 50%;"></div>
-            <div class="balance-slider-fill-right" style="width: 50%;"></div>
-            <div class="balance-slider-handle" style="left: 50%;"></div>
-          </div>
-          <div class="balance-markers">
-            <span class="balance-marker">L</span>
-            <span class="balance-marker">Center</span>
-            <span class="balance-marker">R</span>
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="control-label">Equalizer</div>
-          <div class="equalizer">
-            <div class="eq-band">
-              <div class="eq-slider-container">
-                <div class="eq-slider-fill" style="height: 30%;"></div>
-                <div class="eq-slider-handle" style="bottom: 30%;"></div>
-              </div>
-              <span class="eq-band-label">60Hz</span>
-            </div>
-            <div class="eq-band">
-              <div class="eq-slider-container">
-                <div class="eq-slider-fill" style="height: 50%;"></div>
-                <div class="eq-slider-handle" style="bottom: 50%;"></div>
-              </div>
-              <span class="eq-band-label">250Hz</span>
-            </div>
-            <div class="eq-band">
-              <div class="eq-slider-container">
-                <div class="eq-slider-fill" style="height: 70%;"></div>
-                <div class="eq-slider-handle" style="bottom: 70%;"></div>
-              </div>
-              <span class="eq-band-label">1kHz</span>
-            </div>
-            <div class="eq-band">
-              <div class="eq-slider-container">
-                <div class="eq-slider-fill" style="height: 60%;"></div>
-                <div class="eq-slider-handle" style="bottom: 60%;"></div>
-              </div>
-              <span class="eq-band-label">4kHz</span>
-            </div>
-            <div class="eq-band">
-              <div class="eq-slider-container">
-                <div class="eq-slider-fill" style="height: 40%;"></div>
-                <div class="eq-slider-handle" style="bottom: 40%;"></div>
-              </div>
-              <span class="eq-band-label">16kHz</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <script type="module" src="main.js"></script>
-</body>
+      <div class="content-container">
+
+        <div class="panel left">
+          <div class="panel-title">
+             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+            Left Ear
+          </div>
+           <div class="volume-control channel-volume-control" style="display: none;">
+                <div class="volume-header">
+                <span class="volume-label">Channel Volume</span>
+                <span class="volume-value left-volume">100%</span>
+                </div>
+                <div class="volume-slider-container left-slider">
+                    <div class="volume-slider-fill" style="width: 100%;"></div>
+                    <div class="volume-slider-handle" style="left: 100%;"></div>
+                </div>
+            </div>
+
+          <div class="sources-container">
+             <p class="no-sources">No sources added</p>
+          </div>
+          <button class="add-source-button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add Audio Source
+          </button>
+          <div class="drop-zone" data-channel="left">
+            <div class="drop-message">Drop Here</div>
+          </div>
+        </div>
+
+        <div class="panel right">
+          <div class="panel-title">
+             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+            Right Ear
+          </div>
+          <div class="volume-control channel-volume-control" style="display: none;">
+                <div class="volume-header">
+                <span class="volume-label">Channel Volume</span>
+                <span class="volume-value right-volume">100%</span>
+                </div>
+                <div class="volume-slider-container right-slider">
+                    <div class="volume-slider-fill" style="width: 100%;"></div>
+                    <div class="volume-slider-handle" style="left: 100%;"></div>
+                </div>
+            </div>
+
+          <div class="sources-container">
+             <p class="no-sources">No sources added</p>
+          </div>
+          <button class="add-source-button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add Audio Source
+          </button>
+          <div class="drop-zone" data-channel="right">
+             <div class="drop-message">Drop Here</div>
+          </div>
+        </div>
+
+      </div> 
+    </div> 
+
+
+    <div class="modal-overlay">
+
+        <div class="modal-container source-selection-modal" style="display: none;">
+             <div class="modal-header">
+                <h2 class="modal-title">Select Audio Source</h2>
+                 <button class="close-modal header-button" title="Close">
+                     <svg width="18" height="18" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                 </button>
+             </div>
+             <div class="modal-content">
+                 <div class="source-list" id="available-sources-list">
+                     <div class="loading-sources">Detecting audio sources...</div>
+                 </div>
+             </div>
+        </div>
+
+      <div class="modal-container source-detail-modal" id="detail-modal" style="display: none;">
+          <div class="modal-header">
+            <h2 class="modal-title">Source Details</h2>
+             <button class="close-modal header-button" title="Close">
+                 <svg width="18" height="18" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+             </button>
+          </div>
+          <div class="modal-content">
+              <div class="control-group">
+                  <div class="volume-header">
+                    <span class="control-label">Source Volume</span>
+                    <span class="volume-value detail-value">75%</span>
+                  </div>
+                  <div class="volume-slider-container detail-volume">
+                      <div class="volume-slider-fill"></div>
+                      <div class="volume-slider-handle"></div>
+                  </div>
+              </div>
+              <div class="control-group">
+                    <div class="volume-header"> 
+                    <span class="control-label">Mute</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="mute-toggle" />
+                        <span class="toggle-slider"></span>
+                    </label>
+                    </div>
+                </div>
+               <div class="control-group">
+                   <span class="control-label">Balance</span>
+                   <div class="balance-slider-container">
+                      <div class="balance-slider-fill-left"></div>
+                      <div class="balance-slider-fill-right"></div>
+                      <div class="balance-slider-center-marker"></div>
+                       <div class="balance-slider-handle"></div>
+                   </div>
+                   <div class="balance-markers">
+                       <span class="balance-marker">L</span>
+                       <span class="balance-marker">Center</span>
+                       <span class="balance-marker">R</span>
+                   </div>
+               </div>
+                <div class="control-group">
+                   <div class="control-label eq-label-container">
+                       Equalizer <span class="coming-soon">(Coming Soon)</span>
+                   </div>
+                   <div class="equalizer disabled">
+                       <div class="eq-band"><div class="eq-slider-container"><div class="eq-slider-fill"></div><div class="eq-slider-handle"></div></div><span class="eq-band-label">60Hz</span></div>
+                       <div class="eq-band"><div class="eq-slider-container"><div class="eq-slider-fill"></div><div class="eq-slider-handle"></div></div><span class="eq-band-label">250Hz</span></div>
+                       <div class="eq-band"><div class="eq-slider-container"><div class="eq-slider-fill"></div><div class="eq-slider-handle"></div></div><span class="eq-band-label">1kHz</span></div>
+                       <div class="eq-band"><div class="eq-slider-container"><div class="eq-slider-fill"></div><div class="eq-slider-handle"></div></div><span class="eq-band-label">4kHz</span></div>
+                       <div class="eq-band"><div class="eq-slider-container"><div class="eq-slider-fill"></div><div class="eq-slider-handle"></div></div><span class="eq-band-label">16kHz</span></div>
+                    </div>
+                </div>
+          </div>
+      </div> 
+
+
+       <div class="modal-container settings-modal" id="settings-modal" style="display: none;">
+            <div class="modal-header">
+                <h2 class="modal-title">Settings</h2>
+                <button class="close-modal header-button" title="Close">
+                     <svg width="18" height="18" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                 </button>
+            </div>
+            <div class="modal-content">
+                 <div class="control-group">
+                     <div class="volume-header">
+                       <span class="control-label">Master Volume</span>
+                       <span class="volume-value master-value">75%</span>
+                     </div>
+                     <div class="volume-slider-container master-volume">
+                         <div class="volume-slider-fill"></div>
+                         <div class="volume-slider-handle"></div>
+                     </div>
+                     <small class="control-hint">Controls the overall output volume of the application.</small>
+                 </div>
+
+
+            </div>
+       </div> 
+
+
+    </div> 
+
+
+    <script type="module" src="audio.js"></script>
+    <script type="module" src="renderer.js"></script>
+    <script src="animate.js"></script> 
+  </body>
 </html>
